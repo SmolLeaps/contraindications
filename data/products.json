@@ -1,0 +1,10 @@
+[
+  {
+    "id": "nidramap",
+    "name": "Nidramap",
+    "system": "Ayurveda",
+    "category": "sleep formulation",
+    "ingredients": ["ashwagandha", "bacopa", "jatamansi", "pippali"],
+    "notes": "Exact formulation may vary by product listing."
+  }
+]

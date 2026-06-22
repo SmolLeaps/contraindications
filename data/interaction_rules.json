@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ashwagandha_sedatives",
+    "if": {
+      "ingredient": "ashwagandha",
+      "medication_category": "sedative"
+    },
+    "risk_level": "Possible Risk",
+    "message": "Ashwagandha may add to sedative effects. Avoid casual mixing with sleep aids or sedatives.",
+    "why": "Sedation can stack, which matters for falls, driving, and next-day impairment.",
+    "what_to_ask": "Ask whether the combination could increase drowsiness or impair coordination."
+  },
+  {
+    "id": "lithium_hydration_kidney",
+    "if": {
+      "medication": "lithium",
+      "effect_any": ["gi_upset", "dehydration", "kidney"]
+    },
+    "risk_level": "Known / Possible Risk",
+    "message": "Lithium levels can be affected by hydration, sodium balance, kidney function, diarrhoea, or vomiting. Check with clinician.",
+    "why": "GI upset or dehydration can change lithium handling and raise toxicity risk.",
+    "what_to_ask": "Ask whether the full plan needs lithium level or kidney monitoring."
+  },
+  {
+    "id": "mood_history_uncertainty",
+    "if": {
+      "context": "mood_history",
+      "caution_any": ["mood_history"]
+    },
+    "risk_level": "Possible Risk",
+    "message": "Products with neuropsychiatric uncertainty deserve extra caution if there is a mood disorder or psychosis history.",
+    "why": "Sleep formulas can still affect arousal, mood stability, or agitation in sensitive users.",
+    "what_to_ask": "Ask whether the product is appropriate with your psychiatric history and current medications."
+  },
+  {
+    "id": "blood_thinner_surgery",
+    "if": {
+      "context": "surgery",
+      "caution_any": ["blood_thinner", "surgery"]
+    },
+    "risk_level": "Possible Risk",
+    "message": "Some herbal products can matter around surgery or blood thinner use.",
+    "why": "Perioperative bleeding or anaesthesia concerns can be missed if herbal products are not disclosed.",
+    "what_to_ask": "Ask the surgical team how long before surgery the product should be stopped."
+  }
+]

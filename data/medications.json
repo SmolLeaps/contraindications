@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lithium",
+    "names": ["Lithium"],
+    "categories": ["mood_stabilizer"],
+    "flags": ["kidney", "hydration", "sodium"],
+    "notes": "Small changes in hydration, kidney function, or sodium balance can affect lithium levels."
+  },
+  {
+    "id": "mirtazapine",
+    "names": ["Mirtazapine"],
+    "categories": ["antidepressant", "sedative"],
+    "flags": ["sedation"],
+    "notes": "Can be sedating, especially at lower doses."
+  },
+  {
+    "id": "lorazepam",
+    "names": ["Lorazepam"],
+    "categories": ["sedative", "benzodiazepine"],
+    "flags": ["sedation"],
+    "notes": "Benzodiazepine with additive sedation risk."
+  },
+  {
+    "id": "zolpidem",
+    "names": ["Zolpidem"],
+    "categories": ["sedative", "sleep_aid"],
+    "flags": ["sedation"],
+    "notes": "Sleep aid with additive sedation risk."
+  }
+]

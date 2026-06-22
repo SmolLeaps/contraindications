@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ashwagandha",
+    "names": ["Ashwagandha", "Withania somnifera"],
+    "system": "Ayurveda",
+    "effects": ["sedation", "sleep", "stress", "gi_upset", "thyroid_possible"],
+    "cautions": ["sedatives", "thyroid", "liver", "mood_history"],
+    "evidence_level": "mixed"
+  },
+  {
+    "id": "bacopa",
+    "names": ["Bacopa", "Brahmi", "Bacopa monnieri"],
+    "system": "Ayurveda",
+    "effects": ["memory", "sedation", "gi_upset"],
+    "cautions": ["sedatives", "pregnancy"],
+    "evidence_level": "limited"
+  },
+  {
+    "id": "jatamansi",
+    "names": ["Jatamansi", "Nardostachys jatamansi"],
+    "system": "Ayurveda",
+    "effects": ["sedation", "sleep", "calming"],
+    "cautions": ["sedatives", "pregnancy", "mood_history"],
+    "evidence_level": "limited"
+  },
+  {
+    "id": "pippali",
+    "names": ["Pippali", "Long pepper", "Piper longum"],
+    "system": "Ayurveda",
+    "effects": ["digestion", "bioavailability", "gi_upset"],
+    "cautions": ["blood_thinner", "surgery"],
+    "evidence_level": "limited"
+  }
+]

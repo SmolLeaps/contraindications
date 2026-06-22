@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ingredient-level medication interaction checker for Ayurveda, TCM, Western medicine, and supplements."
+    />
+    <title>Fusion Med Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="background"></div>
+    <main class="shell">
+      <section class="hero card">
+        <div class="eyebrow">Fusion Med Checker</div>
+        <h1>Compare medicines at ingredient level, with uncertainty shown plainly.</h1>
+        <p class="lead">
+          Different medical systems describe medicines differently. This app helps compare them
+          ingredient by ingredient and surfaces possible interaction questions, not clearance.
+        </p>
+        <p class="disclaimer">
+          This app is not medical advice. It cannot prove safety, especially for multi-herb formulas
+          or psychiatric medication combinations.
+        </p>
+      </section>
+
+      <section class="grid">
+        <section class="card form-card">
+          <h2>Enter product and context</h2>
+          <div class="actions">
+            <button id="load-example" type="button">Load Nidramap example</button>
+            <button id="clear-form" type="button" class="secondary">Clear</button>
+          </div>
+
+          <label>
+            Product name
+            <input id="product-name" type="text" placeholder="e.g. Nidramap" />
+          </label>
+
+          <label>
+            Ingredients, one per line or comma separated
+            <textarea
+              id="ingredient-input"
+              rows="6"
+              placeholder="ashwagandha
+bacopa
+jatamansi
+pippali"
+            ></textarea>
+          </label>
+
+          <label>
+            Current medications and supplements
+            <textarea
+              id="med-input"
+              rows="5"
+              placeholder="lithium
+mirtazapine
+lorazepam"
+            ></textarea>
+          </label>
+
+          <fieldset>
+            <legend>Health context</legend>
+            <label><input type="checkbox" value="mood_history" /> Mood disorder or psychosis history</label>
+            <label><input type="checkbox" value="kidney" /> Kidney issues</label>
+            <label><input type="checkbox" value="liver" /> Liver issues</label>
+            <label><input type="checkbox" value="pregnancy" /> Pregnancy</label>
+            <label><input type="checkbox" value="surgery" /> Surgery planned</label>
+            <label><input type="checkbox" value="blood_thinner" /> Blood thinner use</label>
+          </fieldset>
+
+          <button id="analyze" type="button" class="primary">Check interactions</button>
+        </section>
+
+        <section class="card results-card">
+          <div class="section-head">
+            <h2>Results</h2>
+            <span id="risk-badge" class="badge">Waiting for input</span>
+          </div>
+
+          <div id="summary" class="summary"></div>
+
+          <div>
+            <h3>Ingredient breakdown</h3>
+            <div id="ingredient-list" class="chips"></div>
+          </div>
+
+          <div>
+            <h3>Warnings</h3>
+            <div id="warnings" class="stack"></div>
+          </div>
+
+          <div>
+            <h3>Clinician message</h3>
+            <textarea id="message" rows="5" readonly></textarea>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

@@ -5,7 +5,9 @@
     "system": "Ayurveda",
     "effects": ["sedation", "sleep", "stress", "gi_upset", "thyroid_possible"],
     "cautions": ["sedatives", "thyroid", "liver", "mood_history"],
-    "evidence_level": "mixed"
+    "evidence_level": "mixed",
+    "source_label": "NCCIH: Ashwagandha",
+    "source_url": "https://www.nccih.nih.gov/health/ashwagandha"
   },
   {
     "id": "bacopa",

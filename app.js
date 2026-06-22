@@ -24,6 +24,7 @@ function bindNodes() {
   nodes.clearForm = document.getElementById("clear-form");
   nodes.summary = document.getElementById("summary");
   nodes.ingredientList = document.getElementById("ingredient-list");
+  nodes.sources = document.getElementById("sources");
   nodes.warnings = document.getElementById("warnings");
   nodes.message = document.getElementById("message");
   nodes.riskBadge = document.getElementById("risk-badge");
@@ -99,6 +100,7 @@ function analyze() {
 
   renderSummary(product, ingredientRecords, medicationRecords, context, warnings);
   renderIngredients(ingredientRecords);
+  renderSources(ingredientRecords);
   renderWarnings(warnings);
   renderMessage(product, ingredientRecords, medicationRecords);
 }
@@ -272,6 +274,24 @@ function renderIngredients(ingredientRecords) {
     .join("");
 }
 
+function renderSources(ingredientRecords) {
+  const sources = ingredientRecords.filter((item) => item.source_url && item.source_label);
+  if (!sources.length) {
+    nodes.sources.innerHTML = "";
+    return;
+  }
+
+  nodes.sources.innerHTML = sources
+    .map(
+      (item) => `
+        <a class="source-link" href="${escapeAttribute(item.source_url)}" target="_blank" rel="noreferrer">
+          ${escapeHtml(item.source_label)}
+        </a>
+      `,
+    )
+    .join("");
+}
+
 function renderWarnings(warnings) {
   if (!warnings.length) {
     nodes.warnings.innerHTML = `
@@ -332,4 +352,8 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
 }

@@ -172,6 +172,28 @@ button {
   gap: 8px;
 }
 
+.sources {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.source-link {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(24, 77, 71, 0.18);
+  background: rgba(24, 77, 71, 0.08);
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+
+.source-link:hover {
+  background: rgba(24, 77, 71, 0.12);
+}
+
 .chip {
   padding: 8px 12px;
   border-radius: 999px;

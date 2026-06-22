@@ -314,7 +314,7 @@ Display prominently:
 - [x] Render risk cards
 - [x] Add clinician message generator
 - [x] Add disclaimer
-- [ ] Deploy via GitHub Pages
+- [x] Deploy via GitHub Pages. Done: published at `https://smolleaps.github.io/contraindications/`.
 
 ## MVP Success Criteria
 
